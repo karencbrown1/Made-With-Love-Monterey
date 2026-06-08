@@ -40,20 +40,25 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font
 .nav {
   display: flex; align-items: center; justify-content: center;
   gap: 2rem; padding: .8rem 2.5rem;
-  background: #ffffff;
-  border-bottom: 1.5px solid #e8e8e8;
+  background: #5a6b3a;
+  border-bottom: 1.5px solid #4a5a30;
 }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: .95rem; font-weight: 500; color: #000000; transition: color .2s; }
-.nav-links a:hover { color: #5a6b3a; }
+.nav-links a { font-size: .95rem; font-weight: 500; color: #C9973A; transition: color .2s; }
+.nav-links a:hover { color: #e8b84b; }
 .nav-cart {
   display: flex; align-items: center; gap: .5rem;
-  color: #000000; background: none;
+  color: #C9973A; background: none;
   padding: .45rem 0;
   font-size: .95rem; font-weight: 500; cursor: pointer;
   transition: color .2s;
 }
-.nav-cart:hover { color: #5a6b3a; }
+.nav-cart:hover { color: #e8b84b; }
+.cart-count {
+  background: #C9973A; color: #000000;
+  border-radius: 999px; padding: .1rem .45rem;
+  font-size: .78rem; font-weight: 700;
+}
 
 /* ===== HERO ===== */
 .hero {
