@@ -1,5 +1,42 @@
 // ============================================================
-//  PRODUCT DATA
+//  CAROUSEL
+// ============================================================
+let currentSlide = 0;
+const totalSlides = 16;
+
+function moveCarousel(direction) {
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  updateCarousel();
+}
+
+function goToSlide(index) {
+  currentSlide = index;
+  updateCarousel();
+}
+
+function updateCarousel() {
+  document.getElementById('carousel-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentSlide);
+  });
+}
+
+function initCarousel() {
+  const dotsContainer = document.getElementById('carousel-dots');
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  }
+  // Auto-advance every 4 seconds
+  setInterval(() => moveCarousel(1), 4000);
+}
+
+initCarousel();
+
+// ============================================================
+//  PRODUCTS
 //  Replace these with your real items, prices, and Square IDs
 // ============================================================
 const PRODUCTS = [
