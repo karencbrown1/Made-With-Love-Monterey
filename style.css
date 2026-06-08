@@ -28,18 +28,24 @@ a { color: inherit; text-decoration: none; }
 h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
 
 /* ===== NAV ===== */
-.nav {
-  position: sticky; top: 0; z-index: 100;
-  display: flex; align-items: center; gap: 2rem;
-  padding: .6rem 2.5rem;
+/* ===== HEADER ===== */
+.site-header {
   background: #ffffff;
   border-bottom: 1.5px solid #e8e8e8;
+  text-align: center;
+  padding: 1.2rem 2.5rem 0;
 }
-.nav-logo { display: flex; align-items: center; }
-.nav-logo-img { height: 70px; width: auto; object-fit: contain; }
-.nav-links { display: flex; gap: 2rem; list-style: none; margin-left: auto; }
-.nav-links a { font-size: .92rem; font-weight: 500; color: #7a6a55; transition: color .2s; }
-.nav-links a:hover { color: #E76F51; }
+.nav-logo { display: inline-block; }
+.nav-logo-img { height: 100px; width: auto; object-fit: contain; }
+
+.nav {
+  display: flex; align-items: center; justify-content: center;
+  gap: 2rem; padding: .6rem 0;
+  background: #ffffff;
+}
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: .95rem; font-weight: 500; color: #000000; transition: color .2s; }
+.nav-links a:hover { color: #5a6b3a; }
 .nav-cart {
   display: flex; align-items: center; gap: .5rem;
   background: #1a1208; color: #fff;
