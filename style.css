@@ -44,7 +44,7 @@ h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font
   border-bottom: 1.5px solid #4a5a30;
 }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: .95rem; font-weight: 500; color: #C9973A; transition: color .2s; }
+.nav-links a { font-size: 1.167rem; font-weight: 500; color: #C9973A; transition: color .2s; }
 .nav-links a:hover { color: #e8b84b; }
 .nav-cart {
   display: flex; align-items: center; gap: .5rem;
