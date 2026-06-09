@@ -2,7 +2,7 @@
 //  CAROUSEL
 // ============================================================
 let currentSlide = 0;
-const totalSlides = 16;
+const totalSlides = 5;
 
 function moveCarousel(direction) {
   currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
