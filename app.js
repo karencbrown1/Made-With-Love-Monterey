@@ -15,7 +15,7 @@ function goToSlide(index) {
 }
 
 function updateCarousel() {
-  document.getElementById('carousel-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.getElementById('carousel-track').style.transform = `translateX(-${currentSlide * 20}%)`;
   document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
     dot.classList.toggle('active', i === currentSlide);
   });
