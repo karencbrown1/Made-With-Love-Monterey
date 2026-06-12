@@ -3,9 +3,16 @@
 // ============================================================
 let currentSlide = 0;
 const totalSlides = 5;
-
 function moveCarousel(direction) {
   currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  const track = document.getElementById('carousel-track');
+  
+  if ((direction === 1 && currentSlide === 0) || (direction === -1 && currentSlide === totalSlides - 1)) {
+    track.style.transition = 'none';
+  } else {
+    track.style.transition = 'transform .4s ease';
+  }
+  
   updateCarousel();
 }
 
